@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="js/index.js"></script>
+  <title>To Do list</title>
+</head>
+<body>
+  <div class="notifikasi">
+    
+  </div>
+	<div class="navbar">
+	  <div class="logoname">
+	  <i class="icon-app fa-solid fa-book fa-3x"></i>
+	    <h3>To Do List</h3>
+	  </div>
+	<div class="btn-mode-container">
+	  <button onclick="changeMode()">
+	     <i id="icon-mode" class="fa-solid fa-sun fa-2x"></i>
+	  </button>
+	</div>
+	</div>
+	<div class="container">
+	 <!--------tombol add-->
+	  <button onclick="btnShow()" class="btn-list">
+      <i class="fa-solid fa-circle-plus fa-rotate-180 fa-1x"></i>
+	    <h5>Add New Task</h5>
+	  </button>
+	 <!-----tempat memunculkan list-->
+  	 <ul class="semuaList">
+  	   <li>
+
+  	   </li>
+  	 </ul>
+	 <!-------mengeluarkan input----->
+	 <div class="modal-show">
+	   <div class="box-modal">
+	       <div class="header-input">
+	         <p>Add New Task</p>
+	         <button onclick="batal()">
+	           <span><i class="colorX fa-solid fa-x "></i></span>
+	         </button>
+	       </div>
+	     <label for="inputTask">Task Name</label> <br />
+	     <input class="colorInput" type="text" name="" id="inputTask" value="" autofocus/>
+	     <div class="modal-btn">
+	       <button class="colorBtn" onclick="simpan()"><span><i class="fas fa-save "></i> </span>Simpan</button>
+	     </div>
+	   </div>
+	 </div>
+	 <!-------mengeluarkan input----->
+	 <div class="modal-edit">
+	   <div class="box-modal">
+	       <div class="header-input">
+	         <p>Edit Task</p>
+	         <button onclick="cancelEdit()">
+	           <span><i class="colorX fa-solid fa-x "></i></span>
+	         </button>
+	       </div>
+	     <label for="inputTask">Task Name</label> <br />
+	     <input  class="colorInput"type="text" name="" id="input-Edit-Task" value="" autofocus/>
+	     <div class="modal-btn">
+	       <button class="colorBtn" onclick="saveEditTask()"><span><i class="fas fa-save "></i> </span>Simpan</button>
+	     </div>
+	   </div>
+	 </div>
+	</div>
+<!-- Tambahkan variabel global untuk menyimpan teks asli list yang sedang diedit -->
+
+</body>
+</html>
